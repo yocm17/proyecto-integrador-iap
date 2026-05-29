@@ -24,10 +24,15 @@
      vacío ("") si solo quieres una forma.
    -------------------------------------------- */
 
-/* Decoración dorada antes de los títulos h1 y h2 */
+/* Decoración dorada: estrella al inicio y al final de los títulos */
 h1::before,
 h2::before {
-    content: "★ ";
+    content: " ★ ";  /* estrella antes del texto */
+    color: #D4AF37;
+}
+
+h1::after {
+    content: " ★ ";  /* estrella después del texto */
     color: #D4AF37;
 }
 
@@ -47,6 +52,8 @@ h2::before {
 /* Enlaces del menú: se vuelven dorados al pasar el mouse */
 nav a:hover {
     color: #D4AF37 !important;  /* !important fuerza el color por encima de Bootstrap */
+    font-size:larger;
+    line-height: 1; 
 }
 
 /* Botones: al pasar el mouse, fondo gris claro */
@@ -59,7 +66,7 @@ button:hover {
    El botón mantiene su tamaño porque tiene height fijo */
 button:hover a {
     color: #D4AF37;              /* Texto dorado */
-    font-size: 20px;             /* Letra más grande */
+    font-size: 25px;             /* Letra más grande */
     display: inline-block;       /* Permite controlar line-height */
     line-height: 1;              /* Evita que el texto agrande el botón */
 }
@@ -121,6 +128,13 @@ button {
 }
 
 
+/* Saca el logo del flujo normal para que el título
+   y el menú se centren en todo el ancho del header */
+.logo-header {
+    position: absolute;
+}
+
+
 /* --------------------------------------------
    TARJETAS DE PELÍCULAS
    Cada artículo es una tarjeta con imagen,
@@ -131,7 +145,9 @@ button {
    nombre de la película y botón */
 article {
     text-align: center;            /* Centra el texto y el botón */
-    margin-bottom: 20px;           /* Espacio solo entre filas de tarjetas */
+    margin-bottom: 35px;           /* Espacio solo entre filas de tarjetas */
+    font-size: 20px;
+    font-weight: bold;
 }
 
 /* La imagen dentro de la tarjeta se muestra como
