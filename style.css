@@ -49,9 +49,19 @@ nav a:hover {
     color: #D4AF37 !important;  /* !important fuerza el color por encima de Bootstrap */
 }
 
-/* Botones: se oscurecen un poco al pasar el mouse */
+/* Botones: al pasar el mouse, fondo gris claro */
 button:hover {
-    opacity: 0.85;  /* 0.85 = 85% de opacidad, se ve un poco más oscuro */
+    background-color:#0D1B2A;     /* azul oscuro */
+}
+
+/* Enlace dentro del botón: al pasar el mouse sobre el botón,
+   la letra del enlace se vuelve dorada y se agranda.
+   El botón mantiene su tamaño porque tiene height fijo */
+button:hover a {
+    color: #D4AF37;              /* Texto dorado */
+    font-size: 20px;             /* Letra más grande */
+    display: inline-block;       /* Permite controlar line-height */
+    line-height: 1;              /* Evita que el texto agrande el botón */
 }
 
 
@@ -88,13 +98,15 @@ button:hover {
 
 /* Estilo para todos los botones de la página */
 button {
-    background-color: #FFFFFF;   /* Fondo blanco */
-    color: #0D1B2A;              /* Texto azul noche */
-    border: 2px solid #0D1B2A;   /* Borde azul noche de 2 píxeles */
-    padding: 8px 16px;            /* Espaciado interno */
-    border-radius: 5px;           /* Esquinas redondeadas */
-    cursor: pointer;              /* Cambia el cursor a manito */
-    font-weight: bold;            /* Texto en negrita */
+    background-color: #FFFFFF;      /* Fondo blanco */
+    color: #0D1B2A;                 /* Texto azul noche */
+    border: 2px solid #0D1B2A;      /* Borde azul noche de 2 píxeles */
+    padding: 8px 16px;               /* Espaciado interno */
+    border-radius: 5px;              /* Esquinas redondeadas */
+    cursor: pointer;                 /* Cambia el cursor a manito */
+    font-weight: bold;               /* Texto en negrita */
+    height: 40px;                    /* Altura fija para que no crezca */
+    line-height: 24px;               /* Altura de línea fija */
 }
 
 /* Header y footer con fondo azul noche */
