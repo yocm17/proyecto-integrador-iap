@@ -1,0 +1,182 @@
+/* ============================================
+   ARCHIVO: style.css
+   PROYECTO: CineMax CESDE
+   DESCRIPCIÓN: Estilos personalizados de la página
+   ============================================ */
+
+/* --------------------------------------------
+   PALETA DE COLORES
+   - Fondo oscuro: #0D1B2A (azul noche)
+   - Dorado: #D4AF37
+   - Texto blanco: #FFFFFF
+   -------------------------------------------- */
+
+
+/* --------------------------------------------
+   PSEUDO-ELEMENTO ::before
+   Se usa para agregar contenido decorativo
+   antes del texto de un elemento.
+   
+   ¿Cómo funciona?
+   - ::before crea un "hijo virtual" al inicio
+     del elemento seleccionado.
+   - content: obligatorio, puede ser texto o
+     vacío ("") si solo quieres una forma.
+   -------------------------------------------- */
+
+/* Decoración dorada antes de los títulos h1 y h2 */
+h1::before,
+h2::before {
+    content: "★ ";
+    color: #D4AF37;
+}
+
+
+/* --------------------------------------------
+   PSEUDO-CLASE :hover
+   Se activa cuando el usuario pasa el mouse
+   por encima del elemento.
+   
+   ¿Cómo funciona?
+   - Se escribe con dos puntos después del
+     selector: elemento:hover { ... }
+   - Los estilos solo se aplican mientras el
+     mouse está sobre el elemento.
+   -------------------------------------------- */
+
+/* Enlaces del menú: se vuelven dorados al pasar el mouse */
+nav a:hover {
+    color: #D4AF37 !important;  /* !important fuerza el color por encima de Bootstrap */
+}
+
+/* Botones: se oscurecen un poco al pasar el mouse */
+button:hover {
+    opacity: 0.85;  /* 0.85 = 85% de opacidad, se ve un poco más oscuro */
+}
+
+
+/* --------------------------------------------
+   PROPIEDAD position
+   Controla cómo se posiciona un elemento en
+   la página.
+   
+   Valores comunes:
+   - static: valor por defecto, sigue el flujo normal
+   - relative: se mueve respecto a su posición original
+   - absolute: se posiciona respecto a su contenedor
+     más cercano con position: relative
+   - fixed: se queda fijo en la pantalla aunque
+     hagas scroll (desplaces la página)
+   -------------------------------------------- */
+
+/* Clase para el ícono de WhatsApp: se queda fijo
+   en la esquina inferior derecha siempre visible */
+.whatsapp-float {
+    position: fixed;   /* Se queda fijo en la ventana del navegador */
+    bottom: 20px;      /* A 20 píxeles del borde inferior */
+    right: 20px;       /* A 20 píxeles del borde derecho */
+    width: 60px;       /* Ancho del ícono */
+    height: 60px;      /* Alto del ícono */
+    z-index: 1000;     /* Se apila por encima de otros elementos */
+    border-radius: 50%; /* Lo hace circular */
+}
+
+
+/* --------------------------------------------
+   CLASES PERSONALIZADAS
+   -------------------------------------------- */
+
+/* Estilo para todos los botones de la página */
+button {
+    background-color: #FFFFFF;   /* Fondo blanco */
+    color: #0D1B2A;              /* Texto azul noche */
+    border: 2px solid #0D1B2A;   /* Borde azul noche de 2 píxeles */
+    padding: 8px 16px;            /* Espaciado interno */
+    border-radius: 5px;           /* Esquinas redondeadas */
+    cursor: pointer;              /* Cambia el cursor a manito */
+    font-weight: bold;            /* Texto en negrita */
+}
+
+/* Header y footer con fondo azul noche */
+.fondo-azul-noche {
+    background-color: #0D1B2A !important; /* !important para pisar Bootstrap */
+    color: #FFFFFF !important;
+}
+
+/* Texto en color dorado */
+.texto-dorado {
+    color: #D4AF37 !important;
+}
+
+
+/* --------------------------------------------
+   @media queries (DISEÑO RESPONSIVO)
+   
+   ¿Qué son?
+   Son reglas que se activan según el tamaño
+   de la pantalla. Permiten que la página se
+   vea bien en celular, tablet y computador.
+   
+   Sintaxis:
+   @media (max-width: 768px) {
+       /* estilos que solo se aplican en pantallas
+          de 768px o menos (tablets y celulares) */
+   }
+   
+   @media (max-width: 480px) {
+       /* estilos para celulares */
+   }
+   -------------------------------------------- */
+
+/* Pantallas menores a 768px (tablets y celulares grandes) */
+@media (max-width: 768px) {
+    /* Las tarjetas de películas se apilan verticalmente */
+    main section article {
+        width: 100%;           /* Cada tarjeta ocupa todo el ancho */
+        margin-bottom: 20px;   /* Espacio entre tarjetas */
+    }
+
+    /* El menú se centra y los enlaces se ponen uno debajo del otro */
+    nav ul {
+        flex-direction: column;  /* Apila los items verticalmente */
+        align-items: center;     /* Los centra */
+        gap: 10px;               /* Espacio entre cada enlace */
+    }
+
+    /* Los títulos se hacen más pequeños */
+    h1 {
+        font-size: 1.5rem;    /* 1.5rem = 24px aproximadamente */
+    }
+
+    h2 {
+        font-size: 1.2rem;    /* 1.2rem = 19px aproximadamente */
+    }
+
+    /* El logo se achica */
+    header img {
+        width: 80px !important;
+        height: auto !important;
+    }
+}
+
+/* Pantallas menores a 480px (celulares pequeños) */
+@media (max-width: 480px) {
+    /* Header se apila verticalmente */
+    header {
+        flex-direction: column;   /* Logo arriba, contenido abajo */
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* El logo se reduce aún más */
+    header img {
+        width: 60px !important;
+        height: auto !important;
+    }
+
+    /* El footer se centra */
+    footer section {
+        text-align: center;
+    }
+}
