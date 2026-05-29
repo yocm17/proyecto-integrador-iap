@@ -122,6 +122,29 @@ button {
 
 
 /* --------------------------------------------
+   TARJETAS DE PELÍCULAS
+   Cada artículo es una tarjeta con imagen,
+   nombre y botón, todo centrado.
+   -------------------------------------------- */
+
+/* Centra el contenido de cada tarjeta: imagen,
+   nombre de la película y botón */
+article {
+    text-align: center;            /* Centra el texto y el botón */
+    margin-bottom: 20px;           /* Espacio solo entre filas de tarjetas */
+}
+
+/* La imagen dentro de la tarjeta se muestra como
+   bloque para poder centrarla con margin auto */
+article img {
+    display: block;                /* La imagen se comporta como bloque */
+    margin: 0 auto;                /* Margen automático la centra horizontalmente */
+    max-width: 100%;               /* No se desborda del contenedor */
+    height: auto;                  /* Mantiene la proporción */
+}
+
+
+/* --------------------------------------------
    @media queries (DISEÑO RESPONSIVO)
    
    ¿Qué son?
