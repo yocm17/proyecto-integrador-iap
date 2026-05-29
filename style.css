@@ -128,6 +128,18 @@ button {
 }
 
 
+/* --------------------------------------------
+   VIDEO REPRODUCTOR
+   -------------------------------------------- */
+
+video {
+    max-width: 100%;    /* No se desborda del contenedor */
+    height: auto;        /* Mantiene la proporción del video */
+    display: block;      /* Se comporta como bloque */
+    margin: 10px 0;      /* Espacio arriba y abajo */
+}
+
+
 /* Saca el logo del flujo normal para que el título
    y el menú se centren en todo el ancho del header */
 .logo-header {

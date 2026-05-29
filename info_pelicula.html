@@ -1,11 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Michael - CineMax CESDE</title>
+  </head>
+  <body>
+    <header class="container-fluid fondo-azul-noche text-white small d-flex align-items-stretch p-0 position-relative">
+        <section class="logo-header">
+          <img src="cinemax_logo.png" alt="Logo CineMax" style="height: 100px; width: auto; border-radius: 6px;" />
+        </section>
+        <section class="d-flex flex-column w-100 pt-2">
+          <section class="d-flex align-items-center justify-content-center flex-grow-1">
+            <h1 class="mb-0">CineMax CESDE</h1>
+          </section>
+          <section class="d-flex align-items-center justify-content-center flex-grow-1 pt-3 pb-3">
+            <nav class="menu">
+              <ul class="d-flex list-unstyled mb-0">
+                <li class="mx-2"><a class="text-white text-decoration-none" href="index.html">Cartelera</a></li>
+                <li class="mx-2"><a class="text-white text-decoration-none" href="confiteria.html">Confiteria</a></li>
+                <li class="mx-2"><a class="text-white text-decoration-none" href="promociones.html">Promociones</a></li>
+              </ul>
+            </nav>
+          </section>
+        </section>
+    </header>
+
+    <main style="margin: 20px;">
+      <section class="row">
+        <h2>Michael</h2>
+
+        <!-- Columna izquierda: poster y video -->
+        <section class="col-6" style="padding-right: 20px;">
+          <img class="rounded" src="michael_poster.jpg" alt="Michael poster" style="width: 50%; height: auto; margin-bottom: 20px;" />
+
+          <h3>Tráiler</h3>
+          <video controls style="width: 100%; max-width: 100%; border-radius: 6px; margin-top: 10px;">
+            <source src="michael_trailer.mp4" type="video/mp4" />
+            Tu navegador no soporta el elemento de video.
+          </video>
+        </section>
+
+        <!-- Columna derecha: sinopsis y botón de compra -->
+        <section class="col-6" style="background-color: #F5F5F5; padding: 20px; border-radius: 6px; margin-bottom: 300px;">
+          <h3>Sinopsis</h3>
+          <p>
+            <strong>Michael</strong> es la representación cinematográfica de la vida y el legado de uno de los artistas más influyentes que el mundo haya conocido. La película narra la historia de Michael Jackson más allá de la música, desde el descubrimiento de su extraordinario talento como líder de los Jackson Five, hasta el artista visionario cuya ambición creativa lo impulsó a convertirse en el entertainer más grande del mundo.
+          </p>
+          <p>
+            Destacando tanto su vida fuera del escenario como algunas de las actuaciones más icónicas de su carrera temprana, la película ofrece al público un asiento en primera fila para conocer a Michael Jackson como nunca antes.
+          </p>
+          <p>
+            <strong>Director:</strong> Antoine Fuqua<br />
+            <strong>Protagonistas:</strong> Jaafar Jackson, Nia Long, Laura Harrier, Juliano Krue Valdi, Miles Teller, Colman Domingo<br />
+            <strong>Duración:</strong> 127 minutos<br />
+            <strong>Género:</strong> Biografía, Drama, Música
+          </p>
+
+          <button>
+            <a class="text-decoration-none" href="tiquetes.html">Comprar tiquetes</a>
+          </button>
+        </section>
+      </section>
+    </main>
+
+    <footer class="fondo-azul-noche text-white">
+      <section>
+        <h2>Sobre CineMax CESDE</h2>
+        <h2>Contactenos</h2>
+        <h2>Descarga Nuestra APP</h2>
+        <h2>Copyright &copy; 2024 Sundevs Inc. All Rights Reserved</h2>
+        <a href="https://wa.me/+5732090952" target="_blank">
+          <img class="rounded whatsapp-float" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_j6zKHu8BEYzvw9sK3O5kVj2jE5xA0NNdYw&s" alt="Logo de Whatsapp" style="width: 40px; height: 40px;" />
+        </a>
+      </section>
+    </footer>
+  </body>
 </html>
